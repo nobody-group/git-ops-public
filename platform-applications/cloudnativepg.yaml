@@ -11,7 +11,7 @@ spec:
   project: platform
   source:
     path: platform/cloudnativepg
-    repoURL: git@github.com:nobody-group/git-ops-public.git
+    repoURL: https://github.com/nobody-group/git-ops-public.git
   syncPolicy:
     automated:
       allowEmpty: true

@@ -13,7 +13,7 @@ spec:
   project: platform
   source:
     path: platform/cloudflared
-    repoURL: git@github.com:nobody-group/git-ops-public.git
+    repoURL: https://github.com/nobody-group/git-ops-public.git
   syncPolicy:
     automated:
       allowEmpty: true

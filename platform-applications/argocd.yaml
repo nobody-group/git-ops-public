@@ -14,9 +14,9 @@ spec:
   project: platform
   sources:
     - path: platform/argocd
-      repoURL: git@github.com:nobody-group/git-ops-public.git
+      repoURL: https://github.com/nobody-group/git-ops-public.git
     - path: platform/argocd-monitoring
-      repoURL: git@github.com:nobody-group/git-ops-public.git
+      repoURL: https://github.com/nobody-group/git-ops-public.git
   syncPolicy:
     automated:
       allowEmpty: true

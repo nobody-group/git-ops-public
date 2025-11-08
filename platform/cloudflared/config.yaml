@@ -1,4 +1,4 @@
-# NOTE: Search + Replace example.com with your own Cloudflared domain before enabling
+# NOTE: Search + Replace therubycentre.ng with your own Cloudflared domain before enabling
 tunnel: reclaim-the-stack
 credentials-file: /etc/cloudflared/credentials/credentials.json
 metrics: 0.0.0.0:2000
@@ -6,14 +6,14 @@ no-autoupdate: true
 # For more about ingress rules, see
 # https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/configuration/ingress
 # Applications would typically look like:
-# - hostname: <application>.example.com
+# - hostname: <application>.therubycentre.ng
 #   service: http://<application>-web
 ingress:
-  - hostname: argocd.example.com
+  - hostname: argocd.therubycentre.ng
     service: https://argocd-server.argocd.svc
     originRequest:
       noTLSVerify: true
-  - hostname: grafana.example.com
+  - hostname: grafana.therubycentre.ng
     service: http://monitoring-grafana.monitoring.svc
   # This rule matches any traffic which didn't match a previous rule and returns 404:
   - service: http_status:404

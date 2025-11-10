@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-repo-server
+spec:
+  template:
+    spec:
+      volumes:
+        - name: custom-ca-volume
+          configMap:
+            name: custom-ca-001
+      containers:
+        - name: argocd-repo-server
+          volumeMounts:
+            - name: custom-ca-volume
+              mountPath: /app/config/tls
+              readOnly: true

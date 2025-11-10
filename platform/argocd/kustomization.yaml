@@ -1,9 +1,16 @@
 namespace: argocd
 resources:
+  - ./certs
   - ./namespace.yaml
   - https://raw.githubusercontent.com/argoproj/argo-cd/v3.1.7/manifests/install.yaml
+
+configMapGenerator:
+- name: custom-ca-001
+  files:
+    - custom-ca-001.crt
 
 # NOTE: patchesStrategicMerge is deprecated but still works. Converting to the suggested
 # patches: { file: ./config.yaml } syntax results in a validation error.
 patchesStrategicMerge:
   - ./config.yaml
+  - ./patches/custom-ca-001.yaml
